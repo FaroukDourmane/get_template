@@ -1,0 +1,101 @@
+@import '_variables'
+
+.inline-article-block
+    display: flex
+    max-width: 1000px
+    margin: 50px auto
+    @media screen and (max-width: 1030px)
+        max-width: calc(100% - 50px)    
+    div
+        &:first-child
+            margin-right: 20px
+    .article-cover
+        flex-shrink: 0
+        img
+            max-width: 300px
+        .photo-cover,.video-cover
+            width: 350px
+            height: 100%
+            background-color: #f1f1f1
+            background-size: cover
+            background-position: center
+            border-radius: 10px
+        .video-cover
+            &.overlay
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: #000
+                    opacity: 0.4
+                    border-radius: 10px
+                    transition: opacity 0.3s
+                &::before
+                    content: url('#{$assets_url}/svg/play-circle.svg')
+                    position: absolute
+                    z-index: 2
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    transition: 0.3s
+                &:hover
+                    &::after
+                        opacity: 0.6
+                    &::before
+                        transform: translate(-50%, -50%) scale(1.2)
+    .article-content
+        width: 100%
+        h1
+            font-family: $caviar_bold
+            color: $dark
+            margin-bottom: 20px
+        p
+            font-family: $caviar
+            font-size: 17px
+            color: $dark
+            margin-bottom: 20px
+        a.read
+            display: inline-block
+            padding: 0 20px
+            border: 1px $dark solid
+            color: $dark
+            font-family: $caviar_bold
+            font-size: 15px
+            line-height: 45px
+            border-radius: 10px
+    @media screen and (max-width: 750px)
+        background: #f9f9f9
+        display: grid
+        grid-template-columns: auto
+        grid-template-rows: auto auto
+        grid-template-areas: 'cover' 'text'
+        border-radius: 10px
+        .article-content
+            padding: 20px
+            h1
+                font-size: 25px
+            p
+                font-size: 15px
+        .article-cover            
+            grid-area: cover
+            width: 100%
+            height: 250px
+            .photo-cover,.video-cover
+                width: 100%
+                height: 100%
+                border-radius: 10px 10px 0 0
+            img
+                width: auto
+                max-height: 100%
+                margin: 0 auto
+    @media screen and (max-width: 550px)
+        .article-content
+            h1
+                font-size: 20px
+            a.read
+                display: block
+                text-align: center

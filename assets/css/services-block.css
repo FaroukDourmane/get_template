@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "CaviarDreams_bold";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cairo_regular";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.services-block-container {
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  margin-top: -150px;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  padding: 50px;
+}
+@media screen and (max-width: 1030px) {
+  .services-block-container {
+    max-width: calc(100% - 50px);
+  }
+}
+.services-block-container .service-block {
+  background: #F9F9F9;
+  border-radius: 20px;
+  padding: 20px;
+}
+.services-block-container .service-block h1 {
+  color: #050708;
+  font-family: "CaviarDreams_bold";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.services-block-container .service-block p {
+  color: #050708;
+  font-size: 17px;
+  font-family: "CaviarDreams";
+  margin-bottom: 20px;
+}
+.services-block-container .service-block a {
+  background: #0077C0;
+  color: #fff;
+  font-family: "CaviarDreams_bold";
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  line-height: 40px;
+}
+@media screen and (max-width: 800px) {
+  .services-block-container {
+    padding: 20px;
+  }
+  .services-block-container .service-block {
+    padding: 10px;
+  }
+  .services-block-container .service-block h1 {
+    font-size: 16px;
+  }
+  .services-block-container .service-block p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 615px) {
+  .services-block-container {
+    max-width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=services-block.css.map */

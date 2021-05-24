@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "CaviarDreams_bold";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cairo_regular";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.page-overlay, .mobile-menu-container {
+  z-index: -99;
+  transition: 0.3s;
+  opacity: 0;
+}
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+@media screen and (max-width: 720px) {
+  .page-overlay.active {
+    opacity: 0.5;
+    z-index: 90;
+  }
+}
+
+.mobile-menu-container {
+  position: fixed;
+  top: 40px;
+  height: calc(100vh - 80px);
+  right: -20px;
+  background: #FFF;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: -5px 5px 20px 0 rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 720px) {
+  .mobile-menu-container.active {
+    right: 20px;
+    z-index: 99;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mobile-menu-container {
+    width: calc(100% - 40px);
+  }
+}
+.mobile-menu-container .close-mobile-menu {
+  display: block;
+  line-height: 45px;
+  background: #F1F1F1;
+  border-radius: 10px 10px 0 0;
+  padding: 0 20px;
+  font-family: "CaviarDreams_bold";
+  color: #050708;
+  font-size: 15px;
+}
+.mobile-menu-container .close-mobile-menu img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.mobile-menu-container ul {
+  list-style: none;
+  padding: 10px 20px;
+}
+.mobile-menu-container ul li {
+  display: block;
+  border-bottom: 1px #DDD solid;
+}
+.mobile-menu-container ul li:last-child {
+  border-bottom: 0;
+}
+.mobile-menu-container ul li a {
+  display: inline-block;
+  line-height: 50px;
+  color: #050708;
+  font-family: "CaviarDreams_bold";
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=mobile-menu.css.map */

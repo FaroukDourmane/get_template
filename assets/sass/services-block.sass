@@ -1,0 +1,52 @@
+@import '_variables'
+
+.services-block-container
+    background: #FFF
+    border-radius: 10px
+    box-shadow: 0 5px 35px 0 rgba(0,0,0, 0.07)
+    margin: 0 auto
+    margin-top: -150px
+    position: relative
+    z-index: 1
+    max-width: 1000px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto auto
+    grid-gap: 20px
+    padding: 50px
+    @media screen and (max-width: 1030px)
+        max-width: calc(100% - 50px)
+    .service-block
+        background: #F9F9F9
+        border-radius: 20px
+        padding: 20px
+        h1
+            color: $dark
+            font-family: $caviar_bold
+            font-size: 18px
+            margin-bottom: 20px
+        p
+            color: $dark
+            font-size: 17px
+            font-family: $caviar
+            margin-bottom: 20px
+        a
+            background: $blue
+            color: #fff
+            font-family: $caviar_bold
+            font-size: 15px
+            text-align: center
+            display: block
+            border-radius: 10px
+            line-height: 40px
+    @media screen and (max-width: 800px)
+        padding: 20px
+        .service-block
+            padding: 10px
+            h1
+                font-size: 16px
+            p
+                font-size: 15px
+    @media screen and (max-width: 615px)
+        max-width: calc(100% - 40px)
+        grid-template-columns: 1fr

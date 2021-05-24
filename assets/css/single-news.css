@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "CaviarDreams_bold";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cairo_regular";
+  src: url("/wordpress/wp-content/themes/getgroup/assets/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.post-container {
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  margin-top: -150px;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 50px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1030px) {
+  .post-container {
+    max-width: calc(100% - 50px);
+  }
+}
+.post-container h1#title {
+  font-family: "CaviarDreams_bold";
+  color: #050708;
+  margin-bottom: 50px;
+}
+.post-container #content img {
+  max-width: 100% !important;
+}
+
+/*# sourceMappingURL=single-news.css.map */

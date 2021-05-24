@@ -1,0 +1,64 @@
+@import '_variables'
+
+.header-box-container
+    position: absolute
+    top: calc(100%)
+    padding: 20px
+    left: 20px
+    background: #FFF
+    border-radius: 10px
+    width: 100%
+    max-width: 800px
+    box-shadow: 5px 5px 30px 0 rgba(0,0,0,0.3)
+    z-index: -99
+    opacity: 0
+    transition: 0.3s
+    &.active
+        top: calc(100% + 10px)
+        opacity: 1
+        z-index: 99
+    .box-links
+        a
+            color: #343A40
+            font-size: 18px
+            font-family: $caviar_bold
+            width: 120px
+            text-align: center
+            line-height: 40px
+            display: inline-block
+            &.active
+                border-bottom: 2px $blue solid                
+    .box-content
+        display: flex
+        padding: 20px 0
+        .box-article
+            width: 230px
+            position: relative
+            margin-right: 20px
+            .hidden-link
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: 2
+            .cover
+                width: 100%
+                height: 150px
+                background-color: #DDD
+                background-position: center
+                background-size: cover
+                border-radius: 10px 10px 0 0
+            .article-content
+                background: #F1F1F1
+                padding: 10px
+                border-radius: 0 0 10px 10px
+                h5
+                    color: #343A40
+                    font-family: $caviar_bold
+                    margin-bottom: 10px
+                    margin-bottom: 5px
+                .excerpt
+                    font-family: $caviar
+                    font-size: 14px
+                    color: #777                    
